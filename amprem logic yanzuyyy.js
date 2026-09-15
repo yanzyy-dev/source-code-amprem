@@ -2,7 +2,7 @@ import axios from 'axios';
 import crypto from 'crypto';
 
 class AlightMotionAuth {
-  ORDER_ID = "JJOOOOZYY";
+  ORDER_ID = "xyrooozy";
   API_KEY = "AIzaSyDtG1AU22ErnQD60AzBAcaknySiz9_CEq0";
   PRODUCT_ID = "am.full.sub.annual.19q4";
   TOKEN = "mmgaobamlahbbeccfplmbkbb.AO-J1OzqG0or_GJJIx-ms8GrTm-jaglCRfhQSRPUZKpl2YspYS-oN7_94uv8RC5vQbvd_Ios2pPDStZ2n7F0hLE3FiOU7HS3R6Fquulv5xLXFECSv4ctElw";
@@ -225,7 +225,7 @@ export default async function handler(req) {
     if (!action) {
       return res.status(400).json({
         status: false,
-        creator: "yanzuyyy",
+        creator: "xyrooozy",
         message: "Parameter action wajib diisi.",
       });
     }
@@ -236,13 +236,13 @@ export default async function handler(req) {
         if (!result.success) {
           return res.status(500).json({
             status: false,
-            creator: "yanzuyyy",
+            creator: "xyrooozy",
             message: result.error || "Gagal kirim magic link.",
           });
         }
         return res.status(200).json({
           status: true,
-          creator: "yanzuyyy",
+          creator: "xyrooozy",
           result: { message: result.message },
         });
       }
@@ -251,7 +251,7 @@ export default async function handler(req) {
         if (!link) {
           return res.status(400).json({
             status: false,
-            creator: "yanzuyyy",
+            creator: "xyrooozy",
             message: "Parameter link wajib diisi.",
           });
         }
@@ -259,7 +259,7 @@ export default async function handler(req) {
         if (!profile.success) {
           return res.status(500).json({
             status: false,
-            creator: "yanzuyyy",
+            creator: "xyrooozy",
             message: profile.error || "Gagal verifikasi link.",
           });
         }
@@ -267,13 +267,13 @@ export default async function handler(req) {
         if (!premium.success) {
           return res.status(500).json({
             status: false,
-            creator: "yanzuyyy",
+            creator: "xyrooozy",
             message: premium.error || "Gagal apply premium.",
           });
         }
         return res.status(200).json({
           status: true,
-          creator: "yanzuyyy",
+          creator: "xyrooozy",
           result: {
             message: "Verifikasi & premium berhasil.",
             codeorder: premium.codeorder,
@@ -285,7 +285,7 @@ export default async function handler(req) {
         if (apikey !== "201115") {
           return res.status(403).json({
             status: false,
-            creator: "yanzuyyy",
+            creator: "xyrooozy",
             message: "API Key tidak valid.",
           });
         }
@@ -294,7 +294,7 @@ export default async function handler(req) {
         if (!count || count < 100) {
           return res.status(400).json({
             status: false,
-            creator: "yanzuyyy",
+            creator: "xyrooozy",
             message: "Parameter amount wajib diisi dan minimal 100.",
           });
         }
@@ -305,7 +305,7 @@ export default async function handler(req) {
         } catch (err) {
           return res.status(500).json({
             status: false,
-            creator: "yanzuyyy",
+            creator: "xyrooozy",
             message: "Gagal generate tempmail: " + err.message,
           });
         }
@@ -316,7 +316,7 @@ export default async function handler(req) {
 
         return res.status(200).json({
           status: true,
-          creator: "yanzuyyy",
+          creator: "xyrooozy",
           result: {
             message: `Bulk selesai. ${successful.length} berhasil, ${failed.length} gagal.`,
             totalRequested: emails.length,
@@ -329,7 +329,7 @@ export default async function handler(req) {
       default: {
         return res.status(400).json({
           status: false,
-          creator: "yanzuyyy",
+          creator: "xyrooozy",
           message: "Action tidak valid. Gunakan send, verif, atau bulk.",
         });
       }
@@ -337,7 +337,7 @@ export default async function handler(req) {
   } catch (err) {
     return res.status(500).json({
       status: false,
-      creator: "yanzuyyy",
+      creator: "xyrooozy",
       message: err.message,
     });
   }
