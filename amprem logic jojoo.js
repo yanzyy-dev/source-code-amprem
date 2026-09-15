@@ -2,7 +2,7 @@ import axios from 'axios';
 import crypto from 'crypto';
 
 class AlightMotionAuth {
-  ORDER_ID = "JJOOOOZYY";
+  ORDER_ID = "xyrooozy";
   API_KEY = "AIzaSyDtG1AU22ErnQD60AzBAcaknySiz9_CEq0";
   PRODUCT_ID = "am.full.sub.annual.19q4";
   TOKEN = "mmgaobamlahbbeccfplmbkbb.AO-J1OzqG0or_GJJIx-ms8GrTm-jaglCRfhQSRPUZKpl2YspYS-oN7_94uv8RC5vQbvd_Ios2pPDStZ2n7F0hLE3FiOU7HS3R6Fquulv5xLXFECSv4ctElw";
@@ -204,7 +204,7 @@ export default async function handler(req, res) {
     if (!action) {
       return res.status(400).json({
         status: false,
-        creator: "Jjoooozyy",
+        creator: "xyrooozy",
         message: "Parameter action wajib diisi.",
       });
     }
